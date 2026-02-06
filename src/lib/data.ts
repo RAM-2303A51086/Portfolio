@@ -3,18 +3,20 @@ import {
   Code,
   Github,
   Linkedin,
-  Mail,
   Paintbrush,
   Twitter,
   Users,
+  Database,
+  Rocket,
+  Plus,
 } from 'lucide-react';
 
 export const personalData = {
-  name: 'Velpula Abhiram Yadav',
-  title: 'MERN Stack Developer',
-  bio: "A passionate and creative full-stack developer with a knack for building beautiful, functional, and user-centered web applications. With a strong foundation in both front-end and back-end technologies, I enjoy turning complex problems into elegant solutions. I'm always eager to learn new things and collaborate with like-minded individuals to create amazing digital experiences.",
+  name: 'Soumyajit Behera',
+  title: 'Software Engineer',
+  bio: "I’m a Software Engineer who loves transforming ideas into reliable, scalable products. Over time, I’ve explored several technologies and found my passion in building high-performance systems and intuitive user experiences. I’m proficient in JavaScript, C++, Rust, Node.js, and Java — and I enjoy working across both backend and frontend stacks. My key areas of interest include developing Web Applications, Blockchain Solutions, and exploring new ways to bridge on-chain and off-chain systems. Whenever possible, I love building projects with Node.js and modern frameworks like React.js and Next.js.",
   contact: {
-    email: 'alex.doe@example.com',
+    email: 'soumyajit.behera@example.com',
     social: [
       { name: 'GitHub', url: 'https://github.com', icon: Github },
       { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
@@ -25,34 +27,54 @@ export const personalData = {
 
 export const skills = [
   {
-    category: 'Technical Skills',
+    category: 'Languages',
     icon: Code,
     list: [
       {
-        name: 'React & Next.js',
+        name: 'JavaScript',
+        level: 95,
+        description: 'Building interactive and dynamic web applications.',
+      },
+      {
+        name: 'C++',
+        level: 90,
+        description: 'High-performance systems and competitive programming.',
+      },
+      {
+        name: 'Rust',
+        level: 85,
+        description: 'Building safe and concurrent systems software.',
+      },
+      {
+        name: 'Node.js',
+        level: 92,
+        description: 'Creating scalable and efficient back-end services.',
+      },
+      {
+        name: 'Java',
+        level: 88,
+        description: 'Enterprise-level application development.',
+      },
+    ],
+  },
+  {
+    category: 'Frameworks & Technologies',
+    icon: Rocket,
+    list: [
+      {
+        name: 'React.js & Next.js',
         level: 95,
         description: 'Building modern, server-rendered React applications.',
       },
       {
-        name: 'TypeScript',
-        level: 90,
-        description: 'Strongly-typed JavaScript for robust codebases.',
-      },
-      {
-        name: 'Node.js & Express',
-        level: 85,
-        description: 'Creating scalable and efficient back-end services.',
-      },
-      {
-        name: 'Database (SQL & NoSQL)',
+        name: 'Blockchain',
         level: 80,
-        description: 'Experience with PostgreSQL, MongoDB, and Firebase.',
+        description: 'Developing decentralized applications and solutions.',
       },
       {
-        name: 'Tailwind CSS',
-        level: 98,
-        description:
-          'Rapidly building custom user interfaces with utility-first CSS.',
+        name: 'Web Applications',
+        level: 95,
+        description: 'Full-stack development of web-based products.',
       },
     ],
   },
@@ -97,23 +119,6 @@ export const skills = [
         name: 'Communication',
         level: 92,
         description: 'Clearly articulating ideas and feedback.',
-      },
-    ],
-  },
-  {
-    category: 'AI & Machine Learning',
-    icon: BrainCircuit,
-    list: [
-      {
-        name: 'Genkit & Firebase',
-        level: 80,
-        description:
-          "Building AI-powered features with Google's generative AI stack.",
-      },
-      {
-        name: 'Prompt Engineering',
-        level: 85,
-        description: 'Crafting effective prompts for large language models.',
       },
     ],
   },

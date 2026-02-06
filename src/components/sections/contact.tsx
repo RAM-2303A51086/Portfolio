@@ -9,6 +9,7 @@ import { useToast } from '@/hooks/use-toast';
 import { submitContactForm, type ContactFormState } from '@/app/actions';
 import { Loader2 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { personalData } from '@/lib/data';
 
 const initialState: ContactFormState = {
   message: '',
@@ -109,6 +110,24 @@ export function ContactSection() {
                 </form>
             </CardContent>
         </Card>
+      </div>
+      <div className="text-center mt-12">
+        <h3 className="text-2xl font-bold mb-4">Find Me On</h3>
+        <p className="text-muted-foreground mb-6">Feel free to connect with me</p>
+        <div className="flex items-center justify-center gap-4">
+          {personalData.contact.social.map((social) => (
+            <Button key={social.name} variant="outline" size="icon" asChild>
+              <a
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+              >
+                <social.icon className="h-6 w-6 text-foreground" />
+              </a>
+            </Button>
+          ))}
+        </div>
       </div>
     </SectionWrapper>
   );
