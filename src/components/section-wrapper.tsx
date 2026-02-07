@@ -20,7 +20,7 @@ export function SectionWrapper({
         className
       )}
     >
-      <div className="container px-4 md:px-6">{children}</div>
+      <div className="container px-6 md:px-10">{children}</div>
     </section>
   );
 }
