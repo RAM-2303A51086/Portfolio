@@ -17,11 +17,11 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '#home', label: 'Home', icon: Home },
-  { href: '#about', label: 'About', icon: User },
-  { href: '#projects', label: 'Projects', icon: Presentation },
-  { href: '#resume', label: 'Resume', icon: FileText },
-  { href: '#blogs', label: 'Blogs', icon: PenSquare },
+  { href: '/', label: 'Home', icon: Home },
+  { href: '/about', label: 'About', icon: User },
+  { href: '/projects', label: 'Projects', icon: Presentation },
+  { href: '/resume', label: 'Resume', icon: FileText },
+  { href: '/blogs', label: 'Blogs', icon: PenSquare },
 ];
 
 export function Header() {
