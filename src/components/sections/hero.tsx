@@ -3,10 +3,10 @@
 import Image from 'next/image';
 import { personalData } from '@/lib/data';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function HeroSection() {
-  const illustration = PlaceHolderImages.find((img) => img.id === 'avatar');
+  const imageUrl =
+    'https://storage.googleapis.com/res-blockcraft/image/48858548-d3b6-455b-8692-a162235c024d.png';
 
   return (
     <SectionWrapper id="home" className="bg-card">
@@ -19,7 +19,9 @@ export function HeroSection() {
                 👋
               </span>{' '}
               I'M{' '}
-              <span className="text-primary">{personalData.name.toUpperCase()}</span>
+              <span className="text-primary">
+                {personalData.name.toUpperCase()}
+              </span>
             </h1>
             <h2 className="text-2xl font-medium text-foreground/80 uppercase tracking-widest">
               {personalData.title}
@@ -28,12 +30,12 @@ export function HeroSection() {
         </div>
         <div className="flex justify-center items-center lg:col-span-1">
           <div className="relative w-full aspect-square max-w-[400px] lg:max-w-none rounded-full overflow-hidden border-4 border-primary/20">
-            {illustration && (
+            {imageUrl && (
               <Image
-                src={illustration.imageUrl}
+                src={imageUrl}
                 alt="Abhiram Yadav"
                 fill
-                data-ai-hint={illustration.imageHint}
+                data-ai-hint="professional headshot"
                 className="object-cover"
               />
             )}
