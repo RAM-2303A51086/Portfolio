@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { personalData } from '@/lib/data';
 import { SectionWrapper } from '@/components/section-wrapper';
 
@@ -29,17 +28,15 @@ export function HeroSection() {
           </div>
         </div>
         <div className="flex justify-center items-center lg:col-span-1">
-          <div className="relative w-full aspect-square max-w-[400px] lg:max-w-none rounded-full overflow-hidden border-4 border-primary/20">
-            {imageUrl && (
-              <Image
-                src={imageUrl}
-                alt="Abhiram Yadav"
-                fill
-                data-ai-hint="professional headshot"
-                className="object-cover"
-              />
-            )}
-          </div>
+            <div className="w-full max-w-[350px] lg:max-w-[400px]">
+                {imageUrl && (
+                <img
+                    src={imageUrl}
+                    alt="Abhiram Yadav"
+                    className="rounded-full object-cover w-full aspect-square border-4 border-primary/20"
+                />
+                )}
+            </div>
         </div>
       </div>
     </SectionWrapper>
