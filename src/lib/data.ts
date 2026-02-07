@@ -18,7 +18,11 @@ export const personalData = {
   contact: {
     email: 'abhiram.yadav@example.com',
     social: [
-      { name: 'GitHub', url: 'https://github.com', icon: Github },
+      {
+        name: 'GitHub',
+        url: 'https://github.com/RAM-2303A51086',
+        icon: Github,
+      },
       { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
       { name: 'Twitter', url: 'https://twitter.com', icon: Twitter },
     ],

@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { personalData } from '@/lib/data';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
@@ -23,6 +24,9 @@ const navLinks = [
   { href: '/resume', label: 'Resume', icon: FileText },
   { href: '/blogs', label: 'Blogs', icon: PenSquare },
 ];
+
+const githubUrl =
+  personalData.contact.social.find((s) => s.name === 'GitHub')?.url || '#';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +58,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Button asChild>
             <a
-              href="https://github.com/RAM-2303A51086"
+              href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -94,7 +98,7 @@ export function Header() {
             ))}
             <Button asChild size="lg" className="mt-4">
               <a
-                href="https://github.com/RAM-2303A51086"
+                href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
