@@ -6,7 +6,7 @@ import { SectionWrapper } from '@/components/section-wrapper';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function HeroSection() {
-  const illustration = PlaceHolderImages.find((img) => img.id === 'project2');
+  const illustration = PlaceHolderImages.find((img) => img.id === 'avatar');
 
   return (
     <SectionWrapper id="home" className="bg-card">
