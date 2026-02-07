@@ -31,7 +31,7 @@ export function HeroSection() {
             {illustration && (
               <Image
                 src={illustration.imageUrl}
-                alt="Developer illustration"
+                alt="Abhiram Yadav"
                 fill
                 data-ai-hint={illustration.imageHint}
                 className="object-cover"
