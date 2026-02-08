@@ -39,11 +39,8 @@ export function Header() {
           className="flex items-center gap-2"
           onClick={() => setIsOpen(false)}
         >
-          <div className="font-headline text-2xl font-bold tracking-tighter text-foreground">
-            Hi There!{' '}
-            <span className="inline-block origin-[70%_70%] animate-wave">
-              👋
-            </span>
+          <div className="font-headline text-2xl font-bold tracking-tighter text-primary">
+            AR.
           </div>
         </Link>
 
