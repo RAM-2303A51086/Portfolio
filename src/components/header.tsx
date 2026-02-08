@@ -36,10 +36,15 @@ export function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-10 md:px-16">
         <Link
           href="/"
-          className="flex items-center gap-2 text-primary"
+          className="flex items-center gap-2"
           onClick={() => setIsOpen(false)}
         >
-          <span className="font-bold text-2xl tracking-wider">AR.</span>
+          <div className="font-headline text-2xl font-bold tracking-tighter text-foreground">
+            Hi There!{' '}
+            <span className="inline-block origin-[70%_70%] animate-wave">
+              👋
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">

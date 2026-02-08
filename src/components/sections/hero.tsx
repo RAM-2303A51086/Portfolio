@@ -11,11 +11,8 @@ export function HeroSection() {
       <div className="container px-10 md:px-16">
         <div className="flex flex-col items-start justify-center text-left">
           <div className="space-y-2">
-            <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-foreground">
-              Hi There!{' '}
-              <span className="inline-block origin-[70%_70%] animate-wave">
-                👋
-              </span>
+            <h1 className="font-headline text-5xl font-bold tracking-wider sm:text-6xl xl:text-7xl/none text-primary">
+              AR.
             </h1>
             <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-foreground">
               I&apos;M{' '}
