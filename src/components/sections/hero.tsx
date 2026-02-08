@@ -9,7 +9,7 @@ export function HeroSection() {
       id="home"
       className="flex min-h-[calc(100vh-4rem)] items-center justify-start border-b-0 py-0"
     >
-      <div className="flex flex-col items-start justify-center text-left">
+      <div className="flex flex-col items-start justify-center text-left md:pl-20">
         <div className="space-y-2">
           <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-foreground">
             Hi There!{' '}
