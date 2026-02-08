@@ -6,7 +6,7 @@ import { SectionWrapper } from '@/components/section-wrapper';
 import React from 'react';
 
 export function HomeAboutSection() {
-  const [transform, setTransform] = React.useState({ x: 0, y: 0, scale: 1 });
+  const [transform, setTransform] = React.useState({ x: 0, y: 0 });
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -22,21 +22,20 @@ export function HomeAboutSection() {
     const xPct = mouseX / width - 0.5;
     const yPct = mouseY / height - 0.5;
 
-    const maxRotate = 25;
+    const maxRotate = 40;
 
     setTransform({
       x: yPct * maxRotate * -1,
       y: xPct * maxRotate,
-      scale: 1,
     });
   };
 
   const handleMouseLeave = () => {
-    setTransform({ x: 0, y: 0, scale: 1 });
+    setTransform({ x: 0, y: 0 });
   };
 
   return (
-    <SectionWrapper id="home-about" className="py-24">
+    <SectionWrapper id="home-about" className="py-24 border-b-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* Left Content */}
@@ -59,7 +58,7 @@ export function HomeAboutSection() {
         >
           <div
             style={{
-              transform: `rotateX(${transform.x}deg) rotateY(${transform.y}deg) scale(${transform.scale})`,
+              transform: `rotateX(${transform.x}deg) rotateY(${transform.y}deg)`,
             }}
             className="relative w-[230px] aspect-square rounded-full overflow-hidden transition-transform duration-100 ease-out"
           >
