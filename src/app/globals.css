@@ -82,7 +82,9 @@
     @apply bg-background text-foreground;
   }
   .dark body {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 0);
-    background-size: 40px 40px;
+    background-image: url('https://images.unsplash.com/photo-1536440136628-849c177E76a1?q=80&w=2071&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
 }

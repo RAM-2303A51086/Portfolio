@@ -78,38 +78,36 @@ export function Header() {
         </div>
       </div>
       {isOpen && (
-        <div
-          className={cn(
-            'md:hidden absolute top-16 left-0 w-full border-t border-border/40 bg-background/95 backdrop-blur',
-            'animate-in fade-in-20 slide-in-from-top-5'
-          )}
-        >
-          <nav className="grid items-start gap-4 p-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="flex items-center gap-3 rounded-lg px-4 py-2 text-lg font-medium text-foreground transition-colors hover:text-foreground hover:bg-muted"
-                onClick={() => setIsOpen(false)}
-              >
-                <link.icon className="h-5 w-5" />
-                <span>{link.label}</span>
-              </Link>
-            ))}
-            <Button asChild size="lg" className="mt-4">
-              <a
-                href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsOpen(false)}
-              >
-                <GitFork className="h-5 w-5" />
-                <Star className="h-5 w-5" />
-              </a>
-            </Button>
-          </nav>
-        </div>
+  <>
+    {/* Overlay */}
+    <div
+      className="fixed inset-0 z-40 bg-black/50"
+      onClick={() => setIsOpen(false)}
+    />
+
+    {/* Mobile Menu */}
+    <div
+      className={cn(
+        "md:hidden fixed inset-x-0 top-16 z-50 border-t border-border/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80",
+        "animate-in fade-in-20 slide-in-from-top-5"
       )}
+    >
+      <nav className="grid items-start gap-4 p-4">
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="flex items-center gap-3 rounded-lg px-4 py-2 text-lg font-medium text-foreground transition-colors hover:text-foreground hover:bg-muted"
+            onClick={() => setIsOpen(false)}
+          >
+            <link.icon className="h-5 w-5" />
+            <span>{link.label}</span>
+          </Link>
+        ))}
+      </nav>
+    </div>
+  </>
+)}
     </header>
   );
 }
