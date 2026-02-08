@@ -2,15 +2,14 @@
 
 import Image from 'next/image';
 import { personalData } from '@/lib/data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { SectionWrapper } from '@/components/section-wrapper';
 
 export function HomeAboutSection() {
-  const avatarImage = PlaceHolderImages.find((img) => img.id === 'avatar');
-
   return (
     <SectionWrapper id="home-about" className="py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        {/* Left Content */}
         <div className="space-y-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl uppercase text-primary">
             LET ME INTRODUCE MYSELF
@@ -19,18 +18,20 @@ export function HomeAboutSection() {
             {personalData.bio}
           </p>
         </div>
+
+        {/* Right Profile Image */}
         <div className="flex justify-center items-center">
-          {avatarImage && (
+          <div className="relative w-[230px] aspect-square rounded-full overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
             <Image
-              src={avatarImage.imageUrl}
-              alt="Abhiram Yadav Avatar"
-              width={350}
-              height={350}
-              data-ai-hint={avatarImage.imageHint}
-              className="rounded-full aspect-square object-cover"
+              src="/myphoto.png"
+              alt="My Profile Photo"
+              fill
+              className="object-cover scale-125"
+              priority
             />
-          )}
+          </div>
         </div>
+
       </div>
     </SectionWrapper>
   );
