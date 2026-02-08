@@ -9,7 +9,7 @@ export function PlaceholderPage({ id, title }: PlaceholderPageProps) {
   return (
     <SectionWrapper
       id={id}
-      className="flex items-center justify-center min-h-[calc(100vh-10rem)]"
+      className="flex items-center justify-center min-h-screen"
     >
       <div className="text-center">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
