@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="flex items-center flex-1"
+      className="flex min-h-[calc(100vh-4rem)] items-center"
     >
       <div className="container px-10 md:px-16">
         <div className="flex flex-col items-start justify-center text-left">
