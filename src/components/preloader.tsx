@@ -16,17 +16,6 @@ export function Preloader() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    if (show) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [show]);
-
   if (!show) {
     return null;
   }
@@ -34,7 +23,7 @@ export function Preloader() {
   return (
     <div
       className={cn(
-        'fixed inset-0 z-[100] flex items-center justify-center bg-background/90 backdrop-blur-sm transition-opacity duration-500',
+        'fixed inset-0 z-[100] flex items-center justify-center transition-opacity duration-500',
         fade ? 'opacity-0' : 'opacity-100'
       )}
     >
