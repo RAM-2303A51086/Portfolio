@@ -14,7 +14,13 @@ export function AboutSection() {
       <div className="max-w-4xl mx-auto text-left space-y-8">
         <div className="text-center mb-8">
           <p className="text-lg text-foreground/80">
-            India | abhiy9164@gmail.com
+            India |{' '}
+            <a
+              href="mailto:abhiy9164@gmail.com"
+              className="text-primary hover:underline"
+            >
+              abhiy9164@gmail.com
+            </a>
           </p>
         </div>
 
