@@ -27,7 +27,7 @@ export function HomeAboutSection() {
     setTransform({
       x: yPct * maxRotate * -1, // Rotate on X-axis based on Y position (inverted)
       y: xPct * maxRotate, // Rotate on Y-axis based on X position
-      scale: 1.05,
+      scale: 1,
     });
   };
 
