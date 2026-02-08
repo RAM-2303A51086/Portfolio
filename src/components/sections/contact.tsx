@@ -27,7 +27,7 @@ export function ContactSection() {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-full h-14 w-14 bg-card-foreground text-primary hover:bg-card-foreground/90 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
+                    className="rounded-full h-10 w-10 bg-card-foreground text-primary hover:bg-card-foreground/90 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
                     asChild
                   >
                     <a
@@ -36,7 +36,7 @@ export function ContactSection() {
                       rel="noopener noreferrer"
                       aria-label={social.name}
                     >
-                      <social.icon className="h-7 w-7" />
+                      <social.icon className="h-6 w-6" />
                     </a>
                   </Button>
                 </TooltipTrigger>
